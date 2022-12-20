@@ -1,0 +1,28 @@
+{
+    "name": "oh-my-posh",
+    "id": "oh-my-posh",
+    "version": "0.0.1",
+    "description": "Installs oh-my-posh",
+    "documentationURL": "https://ohmyposh.dev/docs",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "The oh-my-posh version to use"
+        },
+        "themeUrl": {
+            "type": "string",
+            "proposals": [
+                "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json"
+            ],
+            "default": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json",
+            "description": "URL of theme to use"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
