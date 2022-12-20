@@ -15,7 +15,14 @@ elif [[ $arch == 'aarch64' ]]; then
     arch='arm64'
 fi
 
-wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/${VERSION}/download/posh-linux-${arch} -O /usr/local/bin/oh-my-posh
+installURL=https://github.com/JanDeDobbeleer/oh-my-posh/releases/${version}/download/posh-linux-${arch}
+    
+if [[ $version != "latest" ]]; then
+    version=v${version}
+    installURL=https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/${version}/posh-linux-${arch}
+fi
+
+wget ${installURL} -O /usr/local/bin/oh-my-posh
 chmod +x /usr/local/bin/oh-my-posh
 
 mkdir -p /home/${_REMOTE_USER}/.poshthemes
