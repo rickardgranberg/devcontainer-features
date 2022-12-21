@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "Activating feature 'oh-my-posh'"
+
 # Ensures depdendencies are installed
 
 has_wget=$(which wget)
@@ -9,7 +11,6 @@ if [[ -z "$has_wget" ]]; then
     apt-get update -y
     apt-get -y install --no-install-recommends wget
 fi
-echo "Activating feature 'oh-my-posh'"
 
 version=${VERSION:-latest}
 themeURL=${THEMEURL:-"https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json"}
