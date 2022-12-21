@@ -1,16 +1,13 @@
 
-# Oh-my-posh (oh-my-posh)
+# oh-my-posh (oh-my-posh)
 
-Installs [https://ohmyposh.dev/](https://ohmyposh.dev/)
+Installs oh-my-posh
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/rickardgranberg/devcontainer-features/oh-my-posh": {
-        "version": "latest",
-        "themeURL": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/agnoster.omp.json"
-    }
+    "ghcr.io/rickardgranberg/devcontainer-features/oh-my-posh:0": {}
 }
 ```
 
@@ -18,11 +15,11 @@ Installs [https://ohmyposh.dev/](https://ohmyposh.dev/)
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select the oh-my-posh version | string | latest |
-| themeURL| URL to the theme to use | string | https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json |
+| version | The oh-my-posh version to use | string | latest |
+| themeUrl | URL of theme to use | string | https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers/feature-starter/blob/main/src/hello/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/rickardgranberg/devcontainer-features/blob/main/src/oh-my-posh/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
