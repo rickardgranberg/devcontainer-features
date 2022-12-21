@@ -1,0 +1,18 @@
+{
+    "install_custom_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "oh-my-posh": {
+                "version": "12.28.0"
+            }
+        }
+    },
+    "install_custom_theme": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "oh-my-posh": {
+                "themeURL": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/agnoster.omp.json"
+            }
+        }
+    }
+}
