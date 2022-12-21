@@ -8,7 +8,7 @@ set -e
 
 if [[ -z "$has_wget" ]]; then
     apt-get update -y
-    apt-get -y install --no-install-recommends wget
+    apt-get -y install --no-install-recommends wget ca-certificates
 fi
 
 version=${VERSION:-latest}
