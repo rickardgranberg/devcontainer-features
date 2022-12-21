@@ -14,7 +14,7 @@ fi
 version=${VERSION:-latest}
 themeURL=${THEMEURL:-"https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json"}
 themeName=${themeURL##*/}
-themeTarget="/home/${_REMOTE_USER}/.poshthemes/${themeName}"
+themeTarget="${_REMOTE_USER_HOME}/.poshthemes/${themeName}"
 
 arch=$(uname -m)
 if [[ $arch == 'x86_64' ]]; then
@@ -33,7 +33,7 @@ fi
 wget ${installURL} -O /usr/local/bin/oh-my-posh
 chmod +x /usr/local/bin/oh-my-posh
 
-mkdir -p /home/${_REMOTE_USER}/.poshthemes
+mkdir -p ${_REMOTE_USER_HOME}/.poshthemes
 wget ${themeURL} -O ${themeTarget}
 chown ${_REMOTE_USER}:${_REMOTE_USER} ${themeTarget}
 
@@ -43,5 +43,5 @@ zshSnippet="eval \"\$(oh-my-posh init zsh --config '${themeTarget}')\""
 # bash
 bashSnippet="eval \"\$(oh-my-posh init bash --config '${themeTarget}')\""
 
-echo "${zshSnippet}" | tee -a /root/.zshrc >> /home/${_REMOTE_USER}/.zshrc
-echo "${bashSnippet}" | tee -a /root/.bashrc >> /home/${_REMOTE_USER}/.bashrc
+echo "${zshSnippet}" | tee -a /root/.zshrc >> ${_REMOTE_USER_HOME}/.zshrc
+echo "${bashSnippet}" | tee -a /root/.bashrc >> ${_REMOTE_USER_HOME}/.bashrc
