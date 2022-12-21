@@ -1,11 +1,10 @@
 #!/bin/bash
-set -e
 
 echo "Activating feature 'oh-my-posh'"
 
 # Ensures depdendencies are installed
-
 has_wget=$(which wget)
+set -e
 
 if [[ -z "$has_wget" ]]; then
     apt-get update -y
