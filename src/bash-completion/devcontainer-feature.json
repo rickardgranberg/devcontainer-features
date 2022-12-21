@@ -1,0 +1,28 @@
+{
+    "name": "bash-completion",
+    "id": "bash-completion",
+    "version": "0.0.1",
+    "description": "Installs and sources selected bash-completion(s)",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "The bash-completion version to use"
+        },
+        "completions": {
+            "type": "string",
+            "proposals": [
+                "git",
+                "git,apt"
+            ],
+            "default": "git",
+            "description": "The bash completions to source/activate. Comma-separated string"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

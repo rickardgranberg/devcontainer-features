@@ -1,0 +1,10 @@
+{
+    "install_custom_completions": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "bash-completion": {
+                "completions": "git,apt"
+            }
+        }
+    }
+}
