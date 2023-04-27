@@ -16,7 +16,6 @@ jobs:
           - oh-my-posh
           - bash-completion
           - kube-config
-          - helm-repos
         baseImage:
           - debian:latest
           - ubuntu:latest

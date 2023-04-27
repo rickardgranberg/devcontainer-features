@@ -1,0 +1,8 @@
+{
+    "install_kube_config": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "kube-config": {}
+        }
+    }
+}

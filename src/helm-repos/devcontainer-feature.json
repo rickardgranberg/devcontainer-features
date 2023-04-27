@@ -3,7 +3,7 @@
     "id": "helm-repos",
     "version": "0.0.1",
     "description": "Adds some default Helm repos",
-    "installAfter": [
+    "installsAfter": [
         "ghcr.io/devcontainers/features/kubectl-helm-minikube"
     ],
     "options": {
