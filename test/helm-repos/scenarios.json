@@ -1,0 +1,18 @@
+{
+    "install_default_repos": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/kubectl-helm-minikube": {},
+            "helm-repos": {}
+        }
+    },
+    "install_custom_repos": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/kubectl-helm-minikube": {},
+            "helm-repos": {
+                "repos": "stable=https://charts.helm.sh/stable,grafana=https://grafana.github.io/helm-charts"
+            }
+        }
+    }
+}

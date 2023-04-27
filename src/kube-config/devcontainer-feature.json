@@ -1,0 +1,16 @@
+{
+    "name": "kube-config",
+    "id": "kube-config",
+    "version": "0.0.1",
+    "description": "Links .kube/config from the local machine into the dev container",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube"
+    ],
+    "mounts": [
+        {
+            "source": "${env:HOME}/.kube",
+            "target": "/usr/local/share/kube-localhost",
+            "type": "bind"
+        }
+    ]
+}

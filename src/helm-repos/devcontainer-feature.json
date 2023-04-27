@@ -1,0 +1,19 @@
+{
+    "name": "helm-repos",
+    "id": "helm-repos",
+    "version": "0.0.1",
+    "description": "Adds some default Helm repos",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube"
+    ],
+    "options": {
+        "repos": {
+            "type": "string",
+            "proposals": [
+                "stable=https://charts.helm.sh/stable"
+            ],
+            "default": "stable=https://charts.helm.sh/stable",
+            "description": "Select the repos to add, comma separated list"
+        }
+    }
+}
