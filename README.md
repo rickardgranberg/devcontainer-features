@@ -13,7 +13,6 @@ See [src/bash-completion/README.md](src/bash-completion/README.md)
 
 See [src/kube-config/README.md](src/kube-config/README.md)
 
-
-## kube-config
+## helm-repos
 
 See [src/helm-repos/README.md](src/helm-repos/README.md)
