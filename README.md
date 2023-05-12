@@ -16,3 +16,7 @@ See [src/kube-config/README.md](src/kube-config/README.md)
 ## helm-repos
 
 See [src/helm-repos/README.md](src/helm-repos/README.md)
+
+## protoc
+
+See [src/protoc/README.md](src/protoc/README.md)
