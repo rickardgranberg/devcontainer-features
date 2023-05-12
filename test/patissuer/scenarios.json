@@ -1,0 +1,42 @@
+{
+    "install_custom_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "patissuer": {
+                "version": "0.1.5"
+            }
+        }
+    },
+    "install_full_config": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "patissuer": {
+                "aadTenantID": "uuid1",
+                "aadClientID": "",
+                "azdoOrganization": "rickardgranberg",
+                "azdoProject": "patissuer",
+                "azdoNpmArtifactFeed": "rgr_feed",
+                "gitAlias": "rgr.com",
+                "tokenScope": "vso.code,vso.other",
+                "tokenVariable": "GOGET_PAT_TOKEN"
+            }
+        }
+    },
+    "install_with_predefined_token": {
+        "build": {
+            "dockerfile": "Dockerfile"
+        },
+        "features": {
+            "patissuer": {
+                "aadTenantID": "uuid1",
+                "aadClientID": "",
+                "azdoOrganization": "rickardgranberg",
+                "azdoProject": "patissuer",
+                "azdoNpmArtifactFeed": "rgr_feed",
+                "gitAlias": "rgr.com",
+                "tokenScope": "vso.code,vso.other",
+                "tokenVariable": "GOGET_PAT_TOKEN"
+            }
+        }
+    }
+}
