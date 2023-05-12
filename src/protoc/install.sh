@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-# ==========================================================================================================
-# <copyright>COPYRIGHT © InfoVista Sweden AB</copyright>
-#
-# The copyright of the computer program herein is the property of InfoVista Sweden AB.
-# The program may be used and/or copied only with the written permission from InfoVista Sweden AB
-# or in the accordance with the terms and conditions stipulated in the agreement/contract under which
-# the program has been supplied.
-# ==========================================================================================================
 
 PROTOC_VER=${VERSION:-"23.0"}
 ARCH="$(uname -m)"
