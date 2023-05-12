@@ -1,0 +1,17 @@
+{
+    "id": "protoc",
+    "version": "0.0.1",
+    "name": "Protobuf compiler",
+    "documentationURL": "https://github.com/protocolbuffers/protobuf",
+    "description": "Installs the protobuf compiler",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "23.0"
+            ],
+            "default": "23.0",
+            "description": "Select or enter a protoc version"
+        }
+    }
+}

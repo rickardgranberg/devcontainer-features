@@ -1,0 +1,74 @@
+{
+    "id": "patissuer",
+    "version": "0.0.1",
+    "name": "PAT Issuer",
+    "documentationURL": "https://github.com/rickardgranberg/patissuer",
+    "description": "Installs the Azure DevOps Personal Access Token Issuer",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "0.1.12"
+            ],
+            "default": "0.1.12",
+            "description": "Select or enter a patissuer version"
+        },
+        "aadTenantID": {
+            "type": "string",
+            "default": "common",
+            "description": "Select or enter the AAD Tenant ID"
+        },
+        "aadClientID": {
+            "type": "string",
+            "default": "",
+            "description": "Select or enter the AAD Client ID"
+        },
+        "azdoOrganization": {
+            "type": "string",
+            "default": "org",
+            "description": "Enter the name of your Azure DevOps organization"
+        },
+        "azdoProject": {
+            "type": "string",
+            "default": "project",
+            "description": "Enter the name of your Azure DevOps project"
+        },
+        "azdoFqdn": {
+            "type": "string",
+            "default": "dev.azure.com",
+            "description": "Enter the fqdn of Azure DevOps"
+        },
+        "azdoNpmArtifactFeed": {
+            "type": "string",
+            "default": "",
+            "description": "Enter the name of the AzDO NPM Artifact feed. This will lead to a .npmrc being created. Mostly useful for NPM repos"
+        },
+        "gitAlias": {
+            "type": "string",
+            "default": "",
+            "description": "Enter the desired git alias. This will be added as an 'insteadOf' in the git config. Mostly useful for Golang repos"
+        },
+        "tokenScope": {
+            "type": "string",
+            "proposals": [
+                "vso.code"
+            ],
+            "default": "vso.code",
+            "description": "Select or enter the AzDO PAT Scope(s)"
+        },
+        "tokenVariable": {
+            "type": "string",
+            "proposals": [
+                "PAT_TOKEN",
+                "GOGET_PAT_TOKEN",
+                "NPM_PAT_TOKEN"
+            ],
+            "default": "PAT_TOKEN",
+            "description": "Select or enter the PAT Token env variable name"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+    "postStartCommand": "${HOME}/.patissuer/entrypoint.sh"
+}
