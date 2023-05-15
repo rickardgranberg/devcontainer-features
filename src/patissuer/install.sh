@@ -33,6 +33,7 @@ rm -f patissuer_${patissuer_ver}_linux_${arch}.zip
 install_dir=${_REMOTE_USER_HOME}/.patissuer
 
 mkdir -p ${install_dir}
+chown -R ${_REMOTE_USER}:${_REMOTE_USER} ${install_dir}
 cp devops-auth.sh ${install_dir}
 chmod +rx ${install_dir}/devops-auth.sh
 
@@ -52,7 +53,7 @@ EOF
 
 # Add things to run when shell starts
 cat << EOF > ${install_dir}/entrypoint.sh
-#!/usr/bin/env bash
+#!/bin/bash -i
 . \${HOME}/.patissuer/devops-auth.sh \${${TOKENVARIABLE}}
 EOF
 chmod +rx ${install_dir}/entrypoint.sh

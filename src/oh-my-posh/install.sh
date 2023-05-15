@@ -34,6 +34,7 @@ wget ${installURL} -O /usr/local/bin/oh-my-posh
 chmod +x /usr/local/bin/oh-my-posh
 
 mkdir -p ${_REMOTE_USER_HOME}/.poshthemes
+chown -R ${_REMOTE_USER}:${_REMOTE_USER} ${_REMOTE_USER_HOME}/.poshthemes
 wget ${themeURL} -O ${themeTarget}
 chown ${_REMOTE_USER}:${_REMOTE_USER} ${themeTarget}
 
