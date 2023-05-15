@@ -1,7 +1,7 @@
 {
     "name": "oh-my-posh",
     "id": "oh-my-posh",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Installs oh-my-posh",
     "documentationURL": "https://ohmyposh.dev/docs",
     "options": {
