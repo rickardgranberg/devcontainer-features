@@ -53,7 +53,15 @@ EOF
 
 # Add things to run when shell starts
 cat << EOF > ${install_dir}/entrypoint.sh
-#!/bin/bash -i
-. \${HOME}/.patissuer/devops-auth.sh \${${TOKENVARIABLE}}
+#!/bin/bash
+    . \${HOME}/.patissuer/devops-auth.sh \${${TOKENVARIABLE}}
+fi
 EOF
 chmod +rx ${install_dir}/entrypoint.sh
+
+add_auth="$(cat << 'EOF'
+. ${HOME}/.patissuer/entrypoint.sh
+EOF
+)"
+
+echo "${add_auth}"  >> ${_REMOTE_USER_HOME}/.bashrc

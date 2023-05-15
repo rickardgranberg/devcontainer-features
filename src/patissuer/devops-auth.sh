@@ -13,6 +13,12 @@ function issue_token() {
         return
     fi
 
+    # This is for scenarios where xdg-open has not yet been configured, such as during feature install:
+    if [[ -z "\${BROWSER}" ]]; then
+        echo "No known default browser, exiting"
+        return
+    fi
+
     if [[ -f "${token_file}" ]]; then
         local token=$(cat ${token_file} | jq -r .token)
         local expiry=$(cat ${token_file} | jq -r .validTo)
@@ -21,6 +27,7 @@ function issue_token() {
     local now=$(date --utc +"%Y-%m-%dT%H:%M:%SZ")
 
     if [[ ! -f "${token_file}" || ${now} > ${expiry}  ]]; then
+
         local tmp_file=/tmp/.gogettoken.json
         rm -rf $tmp_file
         echo "Logging in to issue new Personal Access Token for access to ${AZDO_ORG_PROJECT_NAME} AzDO Private Resources..."
