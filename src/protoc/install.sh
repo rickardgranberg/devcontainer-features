@@ -19,8 +19,8 @@ if [[ -z "$has_wget" ]]; then
     apt-get -y install --no-install-recommends wget ca-certificates unzip
 fi
 
-wget -q https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VER}/protoc-${PROTOC_VER}-linux-${arc}.zip
-unzip -qq protoc-${PROTOC_VER}-linux-${arch}.zip
+wget -q https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VER}/protoc-${PROTOC_VER}-linux-${arch}.zip
+unzip -qqo protoc-${PROTOC_VER}-linux-${arch}.zip
 mv bin/protoc /usr/local/bin/
 chmod 0755 /usr/local/bin/protoc
 mv include/google /usr/local/include/
