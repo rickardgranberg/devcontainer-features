@@ -17,22 +17,15 @@ has_wget=$(which wget)
 has_xdg=$(which xdg-open)
 set -e
 
-if [[ -z "$has_wget" ]]; then
+if [[ -z "$has_wget" || -z "$has_xdg" ]]; then
     apt-get update -y
-    apt-get -y install --no-install-recommends wget ca-certificates unzip
-    apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
-fi
-
-if [[ -z "$has_xdg" ]]; then
-    apt-get update -y
-    # Install required packages
-    apt-get -y install --no-install-recommends libnss3-tools xdg-utils dnsutils netcat
+    apt-get -y install --no-install-recommends --reinstall wget ca-certificates unzip libnss3-tools xdg-utils dnsutils netcat
     apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 fi
 
 
 wget -q https://github.com/rickardgranberg/patissuer/releases/download/v${patissuer_ver}/patissuer_${patissuer_ver}_linux_${arch}.zip
-unzip -qq patissuer_${patissuer_ver}_linux_${arch}.zip
+unzip -qqo patissuer_${patissuer_ver}_linux_${arch}.zip
 mv patissuer /usr/local/bin/
 chmod 0755 /usr/local/bin/patissuer
 rm -f patissuer_${patissuer_ver}_linux_${arch}.zip
