@@ -20,3 +20,7 @@ See [src/helm-repos/README.md](src/helm-repos/README.md)
 ## protoc
 
 See [src/protoc/README.md](src/protoc/README.md)
+
+## docker-scout
+
+See [src/docker-scout/README.md](src/docker-scout/README.md)
