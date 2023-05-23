@@ -43,6 +43,7 @@ jobs:
           - kube-config
           - helm-repos
           - protoc
+          - docker-scout
     steps:
       - uses: actions/checkout@v3
 

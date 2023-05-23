@@ -1,0 +1,21 @@
+{
+    "id": "docker-scout",
+    "version": "0.0.1",
+    "name": "Docker Scout CLI plugin",
+    "documentationURL": "https://github.com/docker/scout-cli",
+    "description": "Installs the Docker Scout CLI plugin",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "0.13.0"
+            ],
+            "default": "0.13.0",
+            "description": "Select or enter a version"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/docker-outside-of-docker",
+        "ghcr.io/devcontainers/features/docker-in-docker"
+    ]
+}
