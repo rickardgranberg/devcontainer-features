@@ -14,5 +14,5 @@ done
 helm repo update
 
 # Move config over from root to $_REMOTE_USER_HOME (Helm/NATS/etc.)
-cp -r /root/.config/ ${_REMOTE_USER_HOME}/.config/
+cp -r /root/.config/ ${_REMOTE_USER_HOME}/
 chown -R ${_REMOTE_USER}:${_REMOTE_USER} ${_REMOTE_USER_HOME}/.config/ 
