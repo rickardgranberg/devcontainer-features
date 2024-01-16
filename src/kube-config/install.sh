@@ -9,7 +9,7 @@ echo "Activating feature kube-config"
 snippet=$(cat << 'EOF'
 if [ -d "/usr/local/share/kube-localhost" ]; then
     mkdir -p $HOME/.kube
-    sudo cp -r /usr/local/share/kube-localhost/* $HOME/.kube
+    sudo cp /usr/local/share/kube-localhost/* $HOME/.kube
     sudo chown -R $(id -u) $HOME/.kube
     sed -i -e "s/localhost/host.docker.internal/g" $HOME/.kube/config
 
