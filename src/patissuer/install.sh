@@ -20,7 +20,7 @@ set -e
 
 if [[ -z "$has_wget" || -z "$has_xdg" || -z "$has_jq"]]; then
     apt-get update -y
-    apt-get -y install --no-install-recommends --reinstall wget ca-certificates unzip libnss3-tools xdg-utils dnsutils netcat-openbsd jq
+    apt-get -y install --no-install-recommends --reinstall wget ca-certificates unzip libnss3-tools xdg-utils jq
     apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 fi
 
