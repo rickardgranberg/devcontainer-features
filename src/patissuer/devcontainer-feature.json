@@ -1,6 +1,6 @@
 {
     "id": "patissuer",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "name": "PAT Issuer",
     "documentationURL": "https://github.com/rickardgranberg/patissuer",
     "description": "Installs the Azure DevOps Personal Access Token Issuer",
@@ -8,9 +8,9 @@
         "version": {
             "type": "string",
             "proposals": [
-                "0.1.12"
+                "0.2.1"
             ],
-            "default": "0.1.12",
+            "default": "0.2.1",
             "description": "Select or enter a patissuer version"
         },
         "aadTenantID": {
