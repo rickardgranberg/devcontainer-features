@@ -15,7 +15,7 @@ Installs the Azure DevOps Personal Access Token Issuer
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select or enter a patissuer version | string | 0.1.12 |
+| version | Select or enter a patissuer version | string | 0.2.1 |
 | aadTenantID | Select or enter the AAD Tenant ID | string | common |
 | aadClientID | Select or enter the AAD Client ID | string | - |
 | azdoOrganization | Enter the name of your Azure DevOps organization | string | org |
